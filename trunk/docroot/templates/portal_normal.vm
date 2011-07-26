@@ -12,9 +12,11 @@
 
 <body class="$css_class">
 
+
 #if($is_signed_in)
 	#dockbar()
 #end
+
 
 <div id="wrapper">
 	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>

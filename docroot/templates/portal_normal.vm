@@ -1,66 +1,81 @@
-<!DOCTYPE html>
-
+<!doctype html>
 #parse ($init)
-
-<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>$the_title - $company_name</title>
+<title>$the_title - $company_name</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="Site Template Theme" />
+<meta name="keywords" content="biermacher,bier, hopfen, hobbybrauer, brauen, dortmund"/>
 
-	$theme.include($top_head_include)
+<link rel="Shortcut Icon" type="/biermacher-eg-theme/image/ico" href="favicon.ico" />
+
+<link href="/biermacher-eg-theme/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/biermacher-eg-theme/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/biermacher-eg-theme/css/menu/superfish.css" media="screen" />
+<link href="/biermacher-eg-theme/css/galleria/page-galleria.css" rel="stylesheet" type="text/css" />
+
+<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="/biermacher-eg-theme/css/ie6.css" media="screen" />
+<![endif]-->
+
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="/biermacher-eg-theme/css/ie7.css" media="screen" />
+<![endif]-->
+	
+
+<!-- JQUERY Library -->
+<script type="text/javascript" src="/biermacher-eg-theme/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/fadeinout.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/cufon-yui.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/PT_Sans_400_700.font.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/fontconfig.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/menu/hoverIntent.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/menu/superfish.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/common.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/galleria/jquery.galleria.js"></script>
+<script type="text/javascript" src="/biermacher-eg-theme/js/galleria/galleria-init2.js"></script>
+<noscript>
+<link rel="stylesheet" href="/biermacher-eg-theme/css/noscript.css" type="text/css" />
+</noscript>
+$theme.include($top_head_include)
 </head>
-
-<body class="$css_class">
+<body>
+<div class="noscript-notice">
+Please enable Javascript to experience full features
+</div>
 
 #if($is_signed_in)
 	#dockbar()
 #end
-
-<div id="wrapper">
-	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
-
-	<header id="banner" role="banner">
-		<hgroup id="heading">
-			<h1 class="company-title">
-				<a class="logo" href="$company_url" title="#language("go-to") $company_name">
-					<span>$company_name</span>
-				</a>
-			</h1>
-
-			<h2 class="community-title">
-				<a href="$community_default_url" title="#language("go-to") $community_name">
-					<span>$community_name</span>
-				</a>
-			</h2>
-
-			<h3 class="page-title">
-				<span>$the_title</span>
-			</h3>
-		</hgroup>
-
-		#if(!$is_signed_in)
-			<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
-		#end
 
 		#if ($update_available_url)
 			<div class="popup-alert-notice">
 				<a class="update-available" href="$update_available_url">#language("updates-are-available-for-liferay")</a>
 			</div>
 		#end
+		
+<div id="pagecontainer"> <!-- Outside Container -->
+	<div id="mainpage"> 
+	
+		<div id="mainpageheader"> <!-- Header Start -->
+			
+			#if ($has_navigation)
+				#parse ("$full_templates_path/navigation.vm")
+			#end			
+			<!-- End of Menu -->
+			
+			<!-- Logo -->
+			<div id="logo"><a  href="$company_url" title="#language("go-to") $company_name"><img src="/biermacher-eg-theme/images/logo.jpg"/></a></div>
+		</div> <!-- Close Header -->
 
-		#if ($has_navigation)
-			#parse ("$full_templates_path/navigation.vm")
-		#end
-	</header>
+		<div id="categorytitle">
+		Elements Page
+		</div>
+		<div class="page-contents">
+		
 
-	<div id="content">
-		<nav class="site-breadcrumbs" id="breadcrumbs">
-			<h1>
-				<span>#language("breadcrumbs")</span>
-			</h1>
-
-			#breadcrumbs()
-		</nav>
+		<div id="contents">
 
 		#if ($selectable)
 			$theme.include($content_include)
@@ -70,18 +85,96 @@
 			$portletDisplay.setTitle($the_title)
 
 			$theme.wrapPortlet("portlet.vm", $content_include)
-		#end
+		#end		
+
+		</div>
+		
+
+		
+		<div class="clear"></div>
+
+
+	</div> <!-- Close Mainpage -->
 	</div>
 
-	<footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			#language("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</p>
-	</footer>
-</div>
+	<!-- Footer start -->
+	<div id="footer">
+		<div id="footerwrap">
+		
+			<div class="footerminibox">
+				<div class="footertitle">Links</div>
+				<div class="footerposts">
+				<ul>
+					#if(!$is_signed_in)
+						<li><a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a></li>
+					#end
+				</ul>
+				</div>
+			</div>
+			
+			<!-- Footer with Social Icons -->
+			<div class="footerminibox">
+				<div class="footertitle">Social</div>
+				<div class="footersocial">
+				<ul>
+					<li><a href="#"><img src="/biermacher-eg-theme/images/icons/facebook_16.png" alt="facebook" /> Facebook</a></li>
+				</ul>
+				</div>
+			</div>
+			<!-- Footer with About and Image -->
+			<div class="footerbox">
+				<div class="footertitle">About us</div>
+				<div class="footertext">
+					<div class="aboutimage">
+						<a href="#"><img src="/biermacher-eg-theme/images/footer/about.jpg" alt="photo" /></a>
+						
+					</div>
+				Lorem ipsum dolor sit amet si si amet, consectetur adipiscing elit. Donec, nibh ut si feugiat placerat, orci lacus arcu velit a lacus
+				</div>
+			</div>
+			
+			<div class="footerflickrwrap flickrfooterspace">
+				<div class="footertitle">Products</div>
+				<!-- Flickr Photos -->
+				<div class="footerflickr">
+				<ul>
+				</ul>
+				</div>
+			</div>
+			
+			<!-- Footer with Address -->
+			<div class="footerbox footerspace">
+				<div class="footertitle">Kontakt</div>
+					<div class="footeraddress">
+						<ul>
+							<li>Biermacher eG,</li>
+							<li>Huckarder Str. 8 - 12,</li>
+							<li>44147 Dormund</li>
+							<li>Telefon: +49 231 55747668</li>
+							<li>E-Mail: <a href="info@biermacher-eg.de">info@biermacher-eg.de</a></li>
+						</ul>
+					</div>
+			</div>
 
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<!-- Footer with Copyright and other info -->
+		<div id="footerbarwrap">
+		<ul>
+			<li>© copyright 2010 by Biermacher eG</li>
+		</ul>
+		</div>
+	</div>
+	<!-- Footer End -->
+</div> <!-- Close Container -->
+<script type="text/javascript"> Cufon.now(); </script>
 </body>
-
 $theme.include($bottom_include)
-
 </html>
+
+
+
+
+
+

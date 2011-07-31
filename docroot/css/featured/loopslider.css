@@ -1,0 +1,174 @@
+		.slideshowgallery { width:988px; height:480px; background: transparent url(../../images/loopslider/slidebg.png) no-repeat 0 0; padding: 16px 20px 20px 17px; margin: -16px 0 0 -17px;}
+		.container { width:988px; height:446px; overflow:hidden; position:relative; cursor:pointer;
+		background: #141214 url(../../images/preload-featured.gif) no-repeat 50% 50%;
+		}
+		.slides { position:absolute; top:0; left:0;}
+		.slides div { position:absolute; top:0; width:988px;}
+		.slides .slideblock { display:none; }
+		#slide1 { display:inline; }
+		#loopedSlider { width:988px; position:relative; clear:both; }
+
+		.pagination {  position:absolute; z-index:21; list-style-type:none; margin:0; padding:0; text-align:center; width:988px;  }
+		.pagination li {display:inline-block; margin: 32px 10px; }	
+		.pagination a { 
+			padding:0;
+			width:9px;
+			text-indent:-3000px;
+			height: 0;
+			display:block;
+			padding-top:14px;
+			overflow:hidden;
+			background-image:url(../../images/loopslider/pagination.png);
+			background-position:0 0;
+			background-repeat:no-repeat;
+			}
+		.pagination li a:hover {background-position:0 -28px}
+		.pagination li.active a {background-position:0 -14px}
+		a.previous { position:absolute; top:195px; left:-9px; z-index:21; display:none;  }
+		a.next { position:absolute; top:195px; right:-9px; z-index:21; display:none;  }
+		
+		.slideimage {float:left;}
+				
+/* -------- Slide Style One -------- */
+
+.SlideStyleOne {  width:988px; height:446px; }
+
+.SlideStyleOne .featureimage img { width:616px ; height: 446px; position: absolute; top:0px; right:0;border-left:1px solid #fff;}
+.SlideStyleOne .slidecaption {
+	top:20px;
+	right:0;
+	left:0;
+	z-index:20;
+	position:absolute;
+	padding:25px 45px 25px 65px;
+	height:446px;
+	width: 250px;
+	background:none;
+	}
+	
+.SlideStyleOne .slidecaption span a{
+	color:#747474;
+	text-shadow: 1px 1px #fff;
+	}
+.SlideStyleOne .slidetext {
+	font-size:14px;
+	line-height:24px;
+	display:block;
+	padding: 10px 0 20px 0;
+	color:#747474;
+	}
+.SlideStyleOne .slidetext a:hover {text-decoration:none;}
+
+.SlideStyleOne .slidestyletitle a{
+		font-size:32px; 
+		letter-spacing:-1px;
+		line-height:18px;
+		font-weight:bold; 
+		color:#111; 
+		display:block;
+		}
+.SlideStyleOne .slidestyletitle a:hover{
+		text-decoration:none;
+		}
+		
+		
+/* -------- Slide Style Two -------- */
+
+.SlideStyleTwo {  width:988px; height:446px; }
+
+.SlideStyleTwo .featureimage img { width:616px ; height: 446px; position: absolute; top:0; left:0;border-right:1px solid #fff;}
+.SlideStyleTwo .slidecaption {
+	top:20px;
+	left:600px;
+	z-index:20;
+	position:absolute;
+	padding:25px 45px 25px 65px;
+	height:446px;
+	width: 250px;
+	background:none;
+	}
+	
+.SlideStyleTwo .slidecaption span a{
+	color:#5D5D5D;
+	text-shadow: 1px 1px #fff;
+	}
+.SlideStyleTwo .slidetext {
+	font-size:14px;
+	line-height:24px;
+	display:block;
+	padding: 10px 0 20px 0;
+	color:#5D5D5D;
+	}
+.SlideStyleTwo .slidetext a:hover {text-decoration:none;}
+
+.SlideStyleTwo .slidestyletitle a{
+		font-size:32px; 
+		letter-spacing:-1px;
+		line-height:18px;
+		font-weight:bold; 
+		color:#111; 
+		display:block;
+		}
+.SlideStyleTwo .slidestyletitle a:hover{
+		text-decoration:none;
+		}
+		
+/* -------- Slide Style Three -------- */
+
+.SlideStyleThree {  width:988px; height:446px; }
+
+.SlideStyleThree .featureimage img { width:892px ; height: 341px; position: absolute; top:54px; left:48px; 
+	border-bottom:1px solid #fff;border-right:1px solid #fff;
+	border-top:1px solid #5D5D5D;border-left:1px solid #5D5D5D;
+	}
+
+
+/* -------- Slide Style Four -------- */
+
+.SlideStyleFour { background: #eee; width:988px; height:446px; }
+
+.SlideStyleFour .featureimage img { width:988px; height:446px;}
+
+
+/* -------- Slide Style Five -------- */
+
+.SlideStyleFive { width:988px; height:446px;}
+
+.SlideStyleFive .featureimage img { }
+.SlideStyleFive .slidecaption {
+	text-align:center;
+	width:865px;
+	z-index:20;
+	position:absolute;
+	margin:65px 65px 25px 65px;
+	}
+	
+.SlideStyleFive .slidecaption span a{
+	color:#5D5D5D;
+	text-shadow: 1px 1px #fff;
+	}
+.SlideStyleFive .slidetext {
+	font-size:14px;
+	line-height:24px;
+	display:block;
+	padding: 30px 0 20px 0;
+	color:#5D5D5D;
+	}
+.SlideStyleFive .slidetext a:hover {text-decoration:none;}
+
+.SlideStyleFive .slidestyletitle a{
+		font-size:72px; 
+		letter-spacing:-1px;
+		line-height:84px;
+		font-weight:bold; 
+		color:#111; 
+		display:block;
+		}
+.SlideStyleFive .slidestyletitle a:hover{
+		text-decoration:none;
+		}
+
+
+
+
+

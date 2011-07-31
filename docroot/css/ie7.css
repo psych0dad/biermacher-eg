@@ -1,0 +1,46 @@
+	.centertextwrap {
+		padding:10px 0 0 0;
+		height:180px;
+	}
+
+	
+.footerflickr ul li { float:left; margin-right:18px; margin-bottom:10px; }
+
+	#contents a.greenbuttonicon span , a.greenbuttonicon span {
+		padding: 10px 0 8px 18px;
+	}
+	
+	#contents a.big-greenbutton-icon span , a.big-greenbutton-icon span {
+		padding: 19px 0 15px 24px;
+	}
+	
+	#contents a.redbuttonicon span , a.redbuttonicon span {
+		padding: 10px 0 8px 18px;
+	}
+	
+	#contents a.big-redbutton-icon span , a.big-redbutton-icon span {
+		padding: 19px 0 15px 24px;
+	}
+	
+	#contents a.bluebuttonicon span , a.bluebuttonicon span {
+		padding: 10px 0 8px 18px;
+	}
+	
+	#contents a.big-bluebutton-icon span , a.big-bluebutton-icon span {
+		padding: 19px 0 15px 24px;
+	}
+	
+	#contents a.graybuttonicon span , a.graybuttonicon span {
+		padding: 10px 0 8px 18px;
+	}
+
+	#contents a.big-graybutton-icon span , a.big-graybutton-icon span {
+		padding: 19px 0 15px 24px;
+	}
+	
+	.pagination {  }
+	.pagination li {display:inline;}
+
+	.addresstitle {
+		margin-left:15px;
+	}

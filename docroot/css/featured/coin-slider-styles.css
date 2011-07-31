@@ -1,0 +1,41 @@
+/*
+	Coin Slider jQuery plugin CSS styles
+	http://workshop.rs/projects/coin-slider
+*/
+
+.slideshowgallery { width:988px; height:480px; background: transparent url(../../images/coinslider/slidebg.png) no-repeat 0 0; padding: 16px 20px 20px 17px; margin: -16px 0 0 -17px;}
+#coin-slider { overflow:hidden; width:988px;height:446px;background: #141214 url(../../images/preload-featured.gif) no-repeat 50% 50%;}
+.coin-slider { zoom: 1; position: relative; }
+.coin-slider a{ text-decoration: none; outline: none; border: none; }
+
+.cs-buttons { font-size: 0px; float: left;  position:absolute; bottom:-11px; z-index:50; margin-top:8px;}
+.cs-buttons a {  margin-right: 20px; height: 14px; width: 9px; float: left;text-indent: -1000px; 
+			background-image:url(../../images/coinslider/pagination.png);
+			background-position:0 0;
+			background-repeat:no-repeat;
+			}
+.cs-buttons a:hover {
+			background-position:0 -28px;
+			}
+.cs-buttons .cs-active {
+			background-image:url(../../images/coinslider/pagination.png);
+			background-position:0 -14px;
+			background-repeat:no-repeat; }
+
+.cs-title {
+			top:63px;
+			left:0;
+			z-index:20;
+			position:absolute;
+			color:#fff;
+			padding:35px 5px 5px 65px;
+			font-size:14px;
+			line-height:18px;
+
+			width: 315px;
+			height:56px;
+			background: #111;
+}
+
+.cs-prev {  text-indent:-3000px; position:relative; top:128px; left:4px; z-index:5; width:42px; height:42px; background: transparent url(../../images/coinslider/previous.png) no-repeat -9px 0px; } 
+.cs-next {  text-indent:-3000px; position:relative; top:128px; right:4px; z-index:5; width:42px; height:42px; background: transparent url(../../images/coinslider/next.png) no-repeat 9px 0; }

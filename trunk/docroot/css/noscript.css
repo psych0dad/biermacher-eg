@@ -1,0 +1,24 @@
+.noscript-notice { display:block;text-align:center; background:#FFFFCC; color:#000; padding: 20px 0 20px 0; font-size:14px;}
+
+.bigtext a { font-size:18px; }
+.mbigtitle { font-size:18px; }
+.mbigdesc {
+	font-size:16px;
+}
+
+.quotenav { display:none; }
+
+a.previous { display:none; }
+a.next { display:none; }
+
+.jcarousel-skin-tango {
+	height:115px;overflow:hidden;
+	margin-left:30px;
+}
+
+.mcycledesc {
+	padding-bottom:20px;
+}
+
+#main_image { display:none; }
+.gallery_unstyled { list-style:none; }

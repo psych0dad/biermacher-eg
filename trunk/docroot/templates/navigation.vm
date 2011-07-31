@@ -6,7 +6,7 @@
 	<ul>
 		#foreach ($nav_item in $nav_items)
 			#if ($nav_item.isSelected())
-				<li class="selected" style="font-size: 12px;">
+				<li class="selected">
 			#else
 				<li>
 			#end
